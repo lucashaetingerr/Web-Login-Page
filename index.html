@@ -1,0 +1,82 @@
+<!-- Códigos para implementar aprendizados web dev -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>[DEV] Login</title>
+</head>
+
+<body>
+    <div class="titulo-container">
+        <h1>Nome do Produto</h1>
+    </div>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form>
+                <h1>Criar conta</h1>
+                <input type="text" placeholder="Nome">
+                <input type="email" placeholder="E-mail">
+                <input type="password" placeholder="Senha">
+                <button>Registrar</button>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form>
+                <h1>Entrar</h1>
+                <input type="email" placeholder="E-mail">
+                <input type="password" placeholder="Senha">
+                <a href="#">Esqueci minha senha</a>
+                <button>Entrar</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Bem-vindo(a) de volta!</h1>
+                    <p>Registre-se para utilizar todas nossas funcionalidades</p>
+                    <button class="hidden" id="login">Entrar</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Olá</h1>
+                    <p>Registre-se para utilizar todas nossas funcionalidades</p>
+                    <button class="hidden" id="register">Registrar-se</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+<footer class="author-footer">
+    <div class="flex-container">
+        <div>
+            Developed by
+            <a href="https://github.com/lucashaetingerr" class="bold-link">@lucashaetingerr</a>
+        </div>
+        <div class="social-icons">
+            <a href="https://github.com/lucashaetingerr" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/lucashaetingerr/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+    <p>&copy; 2024</p>
+</footer>
+
+<style>
+    .flex-container {
+        display: flex;
+        justify-content: center; /* Change to justify-content: space-between; if needed */
+        align-items: center;
+    }
+
+    .social-icons {
+        margin-left: 10px;
+    }
+</style>
