@@ -1,75 +1,95 @@
-<!-- aprendizados web dev -->
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>[DEV] Login</title>
-</head>
-<body>
-    <div class="titulo-container">
-        <h1>Nome do Produto</h1>
-    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>[DEV] Login Responsivo</title>
+  </head>
+  <body>
+    <header class="titulo-container">
+      <h1>Nome do Produto</h1>
+    </header>
 
-    <div class="container" id="container">
-        <div class="form-container sign-up">
-            <form>
-                <h1>Criar conta</h1>
-                <input type="text" placeholder="Nome">
-                <input type="email" placeholder="E-mail">
-                <input type="password" placeholder="Senha">
-                <button>Registrar</button>
-            </form>
+    <main class="container" id="container">
+      <div class="form-container sign-up">
+        <form>
+          <h2>Criar conta</h2>
+          <label for="signup-name" class="sr-only">Nome</label>
+          <input type="text" id="signup-name" placeholder="Nome" />
+          <label for="signup-email" class="sr-only">E-mail</label>
+          <input type="email" id="signup-email" placeholder="E-mail" />
+          <label for="signup-password" class="sr-only">Senha</label>
+          <input type="password" id="signup-password" placeholder="Senha" />
+          <button type="submit">Registrar</button>
+        </form>
+      </div>
+
+      <div class="form-container sign-in">
+        <form>
+          <h2>Entrar</h2>
+          <label for="signin-email" class="sr-only">E-mail</label>
+          <input type="email" id="signin-email" placeholder="E-mail" />
+          <label for="signin-password" class="sr-only">Senha</label>
+          <input type="password" id="signin-password" placeholder="Senha" />
+          <a href="#">Esqueci minha senha</a>
+          <button type="submit">Entrar</button>
+        </form>
+      </div>
+
+      <div class="toggle-container">
+        <div class="toggle">
+          <div class="toggle-panel toggle-left">
+            <h2>Bem-vindo(a) de volta!</h2>
+            <p>Já possui uma conta? Faça login para continuar.</p>
+            <button class="hidden" id="login">Entrar</button>
+          </div>
+          <div class="toggle-panel toggle-right">
+            <h2>Olá!</h2>
+            <p>Ainda não tem uma conta? Registre-se gratuitamente!</p>
+            <button class="hidden" id="register">Registrar-se</button>
+          </div>
         </div>
-        <div class="form-container sign-in">
-            <form>
-                <h1>Entrar</h1>
-                <input type="email" placeholder="E-mail">
-                <input type="password" placeholder="Senha">
-                <a href="#">Esqueci minha senha</a>
-                <button>Entrar</button>
-            </form>
-        </div>
-        <div class="toggle-container">
-            <div class="toggle">
-                <div class="toggle-panel toggle-left">
-                    <h1>Bem-vindo(a) de volta!</h1>
-                    <p>Registre-se para utilizar todas nossas funcionalidades</p>
-                    <button class="hidden" id="login">Entrar</button>
-                </div>
-                <div class="toggle-panel toggle-right">
-                    <h1>Olá</h1>
-                    <p>Registre-se para utilizar todas nossas funcionalidades</p>
-                    <button class="hidden" id="register">Registrar-se</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="script.js"></script>
-</body>
-</html>
-<footer class="author-footer">
-    <div class="flex-container">
-        <div>
-            Developed by
-            <a href="https://github.com/lucashaetingerr" class="bold-link">@lucashaetingerr</a>
-        </div>
+      </div>
+    </main>
+
+    <footer class="author-footer">
+      <div class="flex-container">
+        <span>
+          Desenvolvido por
+          <a href="https://github.com/lucashaetingerr" class="author-link">
+            @lucashaetingerr
+          </a>
+        </span>
         <div class="social-icons">
-            <a href="https://github.com/lucashaetingerr" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.instagram.com/lucashaetingerr/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a
+            href="https://github.com/lucashaetingerr"
+            target="_blank"
+            aria-label="GitHub Profile"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/lucashaetingerr/"
+            target="_blank"
+            aria-label="Instagram Profile"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
         </div>
-    </div>
-    <p>&copy; 2024</p>
-</footer>
-<style>
-    .flex-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .social-icons {
-        margin-left: 10px;
-    }
-</style>
+      </div>
+      <p>
+        © <span id="current-year">2024</span> Nome do Produto.
+      </p>
+    </footer>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
